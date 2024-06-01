@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Google Sheets</title>
+</head>
+<body>
+    <h1>Google Sheets Data</h1>
+    <p>Hello {{ values.1.1 }} dari Jurusan {{ values.1.2 }}. Nilai Anda:</p>
+    <table border="1">
+        {% for row in values %}
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1><span class="blue">Kuliah: </span><span class="yellow">{{ sheet_name }}</span></h1>
+    <h2>{{ values1.1.1 }}<br>{{ values1.1.0 }}<br>{{ values1.1.2 }}</h2>
+</div>
+
+<table>
+	<thead>
+	<tr>
+		{% for cell in values1.0 %}
+            <th>{{ cell }}</th>
+        {% endfor %}
+	</tr>
+	</thead>
+	<tbody>
+    {% for row in values1 %}
+        {% if not forloop.first %} <!-- Skip the first row -->
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}    
+        </tr>
+        {% endif %}
+    {% endfor %}
+	</tbody>
+</table>
+    
+
+{% endblock content %}

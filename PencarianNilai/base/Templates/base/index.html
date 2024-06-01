@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+
+<form  action="" method="post">
+    <h3 style="color: #ffffff;">Informasi Nilai</h3>
+
+    <label for="List">Nama Mata Kuliah</label>
+    <br>
+    <select  class="Dropdown" name="List" id="Dropdown">
+        <option  name="List" value="Animasi Dasar 2023">Animasi Dasar 2023</option>
+        <option  name="List" value="Arsitektur dan Organisasi Sistem Komputer 2023">Arsitektur dan Organisasi Sistem Komputer 2023</option>
+        <option  name="List" value="Mobile Programming 2023">Mobile Programming 2023</option>
+        <option  name="List" value="Pemrograman Berorientasi Objek 2023">Pemrograman Berorientasi Objek 2023</option>
+    </select>
+    <br>
+    <label for="username">Username</label>
+    <input type="text" name="Username" placeholder="Username" id="username" required="required">
+
+
+
+    <label for="password">Password</label>
+    <input type="password" name="Password" placeholder="Password" id="password" required="required">
+    <button style="margin-top: 50px; border-radius: 5px;" type="submit">Periksa Nilai</button>
+</form>
+
+{% endblock content %}
